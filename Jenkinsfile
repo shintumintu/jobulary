@@ -1,7 +1,16 @@
+def appname ="Runner"
+def xcarchive = "${appname}.carchive"
+
 pipeline {
     agent any
     
     stages {
+        
+        stage ('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage('TEST') {
             steps {
                 sh 'flutter test --coverage test/widget_test.dart'
