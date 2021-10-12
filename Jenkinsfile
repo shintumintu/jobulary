@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('TEST') {
             steps {
-                sh 'flutter test'
+                sh 'flutter test --coverage test/widget_test.dart'
             }
         }
         stage('BUILD') {
