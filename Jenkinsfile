@@ -19,7 +19,6 @@ pipeline {
         stage('BUILD') {
             steps {
                 bat '''
-                  #!/bin/bat
                   flutter build web
                   '''
             }
