@@ -13,12 +13,12 @@ pipeline {
         }
         stage('TEST') {
             steps {
-                sh 'flutter test --coverage test/widget_test.dart'
+                bat 'flutter test --coverage test/widget_test.dart'
             }
         }
         stage('BUILD') {
             steps {
-                sh '''
+                bat '''
                   #!/bin/sh
                   flutter build web
                   '''
